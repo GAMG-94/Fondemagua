@@ -1,0 +1,234 @@
+@import "../../../styles.scss";
+
+.login{
+  height: 0%;
+  position: fixed;
+  width: 100%;
+  flex-direction: column;
+  background-color: #00000073;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.login--active{
+  height: 100%;
+}
+
+.bar-acronym{
+  display: inline-block;
+  width: 100%;
+  padding: 5px;
+  background-color: #0D4577;
+  text-align: center;
+  color: #fff;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: $white;
+  box-shadow: 2px 0px 2px #00000062;
+
+  .--login-mobile {
+    display: none;
+  }
+  .button-burger {
+    display: none;
+  }
+  .button-close {
+    display: none;
+  }
+  .nav-bar__logo {
+    width: 200px;
+  }
+
+  .nav-bar__buttons {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+
+    .button {
+      a {
+        color: #000;
+        padding: 10px;
+        text-decoration: none;
+        transition: all .2s;
+        border-radius: 10px;
+      }
+      .active{
+        background-color: $blue;
+        color: #ffffff;
+        font-weight: 400;
+        border-radius: 6px;
+      }
+
+      a:hover {
+        background-color: $lightblue;
+        color: #fff;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .nav-bar__button-login {
+    display: flex;
+    justify-content: center;
+    background-color: $blue;
+    border-radius: 100%;
+    padding: 7px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    cursor: pointer;
+
+    img {
+      width: 26px;
+    }
+  }
+  .nav-bar__button-login:hover {
+    background-color: $lightblue;
+    transition: 0.3s;
+  }
+}
+
+.active {
+  background-color: $blue;
+  color: $black;
+  border-radius: 10px;
+}
+
+//laptop size ----------->
+
+@media (max-width: 1007px) and (min-width: 721px) {
+  .nav-bar {
+    padding: 10px 20px;
+
+    .nav-bar__logo{
+      width: 170px;
+    }
+    .nav-bar__logo{
+      font-size: 1.2em;
+    }
+
+    .button {
+      a {
+        font-size: 0.9em;
+      }
+    }
+
+    .nav-bar__button-login {
+      width: 30px;
+      height: 30px;
+      padding: 5px;
+
+      img{
+        fill: #fff !important;
+      }
+    }
+  }
+}
+
+// Mobile size ----------->
+@media (max-width: 720px) and (min-width: 320px){
+  .bar-acronym{
+    font-size: .8em;
+    padding: 2px 0px;
+  }
+  .nav-bar {
+    padding: 20px;
+    height: 60px;
+
+    .nav-bar__logo{
+      width: 150px;
+    }
+
+    .nav-bar__buttons {
+      height: 0%;
+      position: fixed;
+      z-index: 2;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      background-color: $white;
+      overflow: hidden;
+      transition: all 0.5s ease;
+      box-shadow: 2px 0px 2px #00000062;
+
+      .button {
+        font-size: 1.5em;
+        width: 100%;
+        text-align: center;
+        a {
+          display: inline-block;
+          width: 100%;
+          border-radius: 0px;
+          padding: 20px;
+        }
+      }
+      .button-close {
+        display: inline-block;
+        align-self: flex-start;
+        button {
+          color: $blue;
+          font-size: 3em;
+          margin: 10px 25px;
+          background-color: transparent;
+          border: none;
+        }
+      }
+
+      .active {
+        border-radius: 0px;
+      }
+    }
+
+    .nav-bar__buttons--active {
+      height: 100%;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+
+    .button-burger {
+      display: flex;
+      background-color: transparent;
+      border: none;
+    }
+
+    .button-burger:active,
+    .button-close button:active {
+      transform: scale(1.2);
+    }
+
+    .nav-bar__button-login {
+      display: none;
+    }
+
+    .--login-mobile {
+      display: inline-block;
+    }
+
+    .nav-bar__button-login--movil {
+      background-color: $blue;
+      width: 80%;
+      font-size: 1.3em;
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+      color: #fff;
+    }
+
+    .nav-bar__button-login--movil:active {
+      background-color: $white;
+      transition: 0.3s;
+    }
+
+  }
+}
+

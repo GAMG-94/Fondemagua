@@ -1,0 +1,22 @@
+// Importación de la fuente con los grosores
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100;200;300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+$black : #1D1D1D;
+$blue : #0D4577;
+$lightblue : #3B73A6;
+$white : #fff;
+$gray : #9494A1;
+$yellow : #FFA300;
+
+*,
+::before,
+::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Roboto', sans-serif;
+}

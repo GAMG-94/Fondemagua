@@ -1,0 +1,303 @@
+@import "../styles.scss";
+
+#img-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $lightblue;
+  height: 450px;
+  color: #fff;
+
+  .img-top__description {
+    width: 500px;
+    h1 {
+      font-size: 2.2em;
+      font-weight: 400;
+    }
+    p {
+      font-weight: 300;
+      margin: 5px 0px 10px 0px;
+      font-size: 1.5em;
+    }
+  }
+  .img-top__img {
+    width: 600px;
+    height: 350px;
+  }
+  .button {
+    background-color: $blue;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-weight: 500;
+    font-size: 1em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .button:hover {
+    transition: 0.3s;
+    background: $white;
+    color: $blue;
+  }
+}
+
+#section-services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 30px;
+
+  .section-services__title {
+    font-size: 2.2em;
+    font-weight: 500;
+  }
+
+  .section-services__description {
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0px;
+  color: #fff;
+
+  .cards__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $blue;
+    height: 300px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    border: solid 4px $black;
+    box-shadow: 0px 4px 4px #00000069;
+    cursor: pointer;
+    transition: 0.3s;
+    img {
+      width: 155px;
+    }
+  }
+
+  .cards__card:hover {
+    transition: 0.3s;
+    background-color: $white;
+    color: #000000;
+    transform: scale(1.02) translateY(-5px);
+  }
+}
+
+#afiliacion {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 0px;
+  align-items: center;
+  box-shadow: -4px 0px 4px #00000069;
+
+  .afiliacion__text {
+    h2 {
+      font-size: 2.2em;
+      font-weight: 500;
+      color: $blue;
+    }
+    p {
+      font-size: 1.5em;
+      font-weight: 300;
+      width: 300px;
+      margin: 15px 0px;
+    }
+
+    button {
+      background-color: transparent;
+      font-size: 1.2em;
+      width: 200px;
+      color: $blue;
+      padding: 5px;
+      border-radius: 10px;
+      border: solid 2px $blue;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transition: 0.3s;
+      background-color: $blue;
+      color: #ffffff;
+    }
+  }
+
+  .afiliacion__img-hands {
+    width: 350px;
+  }
+}
+
+#slide {
+  padding: 40px;
+  text-align: center;
+  background-color: $blue;
+  h2 {
+    color: #ffffff;
+    font-size: 2.2em;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+}
+
+#contact {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  .contact__text {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      font-size: 2.2em;
+      font-weight: 500;
+    }
+    hr {
+      height: 10px;
+      background-color: $blue;
+      border: none;
+    }
+
+    p {
+      margin-top: 10px;
+      width: 400px;
+      font-size: 1.5em;
+      font-weight: 300;
+    }
+  }
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+    label {
+      font-size: 1.2em;
+      width: 100%;
+      font-weight: 300;
+    }
+    input {
+      width: 300px;
+      height: 30px;
+      margin-bottom: 10px;
+    }
+    textarea {
+      resize: none;
+      width: 300px;
+    }
+
+    button {
+      margin-top: 10px;
+      background-color: $blue;
+      color: #ffffff;
+      border: none;
+      padding: 5px;
+      border-radius: 10px;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: $lightblue;
+    }
+  }
+}
+
+// Mobile view
+
+@media (max-width: 680px) and (min-width: 320px){
+  #img-top {
+    .img-top__description{
+      padding: 5px;
+      text-align: center;
+      h1{
+        font-size: 1.5em;
+      }
+      p{
+        font-size: 1em;
+      }
+
+      .button{
+        font-size: .8em;
+      }
+    }
+    .img-top__img {
+      display: none;
+    }
+
+  }
+
+  #section-services{
+    margin: 50px 10px;
+    .section-services__title{
+      font-size: 1.5em;
+
+    }
+    .section-services__description{
+      font-size: 1em;
+    }
+  }
+
+  .cards{
+    .cards__card{
+      font-size: .8em;
+      width: 150px;
+      height: 200px;
+      img{
+        width: 100px;
+      }
+    }
+  }
+
+  #afiliacion{
+    .afiliacion__text{
+      text-align: center;
+      h2{
+        font-size: 1.5em;
+      }
+
+      p{
+        font-size: 1em;
+      }
+
+    }
+
+    img{
+      display: none;
+    }
+  }
+
+  #slide{
+    padding: 10px;
+    h2{
+      font-size: 1.5em;
+    }
+
+  }
+
+  #contact{
+    flex-direction: column;
+    align-items: center;
+
+    .contact__text{
+      text-align: center;
+      align-items: center;
+      h2{
+        font-size: 1.5em;
+      }
+      hr{
+        width: 80%;
+      }
+      p{
+        font-size: 1em;
+        padding: 0px 50px;
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+@import "../../../styles.scss";
+
+.log-in {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+
+
+  .log-in__container {
+    background-color: $white;
+    width: 450px;
+    height: 500px;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .log-in__text {
+      display: flex;
+      justify-content: space-between;
+      h1 {
+        font-size: 2.2em;
+        font-weight: 400;
+      }
+
+      button {
+        background-color: transparent;
+        width: 30px;
+        height: 30px;
+        color: $blue;
+        font-weight: 700;
+        border: solid 2px $blue;
+        border-radius: 7px;
+        cursor: pointer;
+        padding: 5px;
+        transition: all .2s;
+      }
+
+      button:hover {
+        color: $white;
+        border: solid 2px $lightblue;
+        background-color: $lightblue;
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      height: 70%;
+      align-items: center;
+      input {
+        height: 35px;
+        margin-bottom: 30px;
+        width: 100%;
+        padding: 16px;
+        font-size: 18px;
+      }
+
+      input::placeholder {
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 20px;
+      }
+      .user::placeholder {
+        background-image: url("../../../assets/img/user-ico.svg");
+      }
+      .password::placeholder{
+        background-image: url("../../../assets/img/secure-ico.svg");
+      }
+
+      label {
+        align-self: flex-start;
+        font-size: 18px;
+        margin: 6px;
+      }
+
+      button {
+        background-color: $blue;
+        width: 70%;
+        padding: 5px;
+        font-size: 1.2em;
+        color: #ffffff;
+        border-radius: 5px;
+        border: none;
+        margin: 20px 0px;
+        cursor: pointer;
+        transition: all .2s;
+      }
+      button:hover {
+        background-color: $lightblue;
+      }
+      a {
+        text-align: center;
+        color: $black;
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: $blue;
+
+      }
+    }
+  }
+}
+
+@media (max-width: 1007px) and (min-width: 721px){
+
+}
+
+@media (max-width: 720px) and (min-width: 320px){
+
+}

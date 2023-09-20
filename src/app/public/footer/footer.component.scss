@@ -1,0 +1,130 @@
+@import "../../../styles.scss";
+
+.footer {
+  position: relative;
+  bottom: 0;
+}
+
+.container {
+  background-color: $blue;
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: 1fr;
+
+  /* TITULO DEL FOOTER */
+  .logo {
+    margin-top: 1.25em;
+    align-items: center;
+    color: $yellow;
+    text-align: center;
+    font-family: Roboto;
+    letter-spacing: 2px;
+    font-size: 1.6em;
+  }
+
+  /* CONTENEDOR DE LOS ENLACES Y CONTACTO */
+  .container-footer {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-content: center;
+  }
+
+  .links {
+    padding: 0 0 .8rem 0;
+
+    ul > li {
+      list-style: none;
+      padding: .4em;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-family: Nunito;
+      font-weight: 300;
+      font-size: 1.4em;
+      transition: all .4s;
+      font-weight: 500;
+    }
+
+    a:hover {
+      color: $yellow;
+    }
+  }
+
+  .contact > p{
+    color: #fff;
+    font-family: Nunito;
+    font-weight: 500;
+    font-size: 1.4em;
+    padding: .28em;
+  }
+
+  .copy {
+    background-color: $blue;
+    height: 2rem;
+  }
+
+  .copy > p > span {
+    color: $yellow;
+    font-family: Roboto;
+    letter-spacing: 1px;
+  }
+
+  .text {
+    text-align: center;
+    margin-top: .4rem;
+    color: #ffffff;
+    font-family: Nunito;
+  }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width:540px) {
+
+  .container {
+    text-align: center;
+    .logo > h2 {
+      font-size: 1.8rem;
+    }
+
+  .container-footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+  }
+
+  .links {
+    text-align: center;
+
+    a {
+      padding-left: 30px;
+      text-decoration: none;
+      color: #fff;
+      font-family: Nunito;
+      font-weight: 300;
+      font-size: 1.2em;
+      transition: all .4s;
+      font-weight: 300;
+    }
+
+    a:hover {
+      color: $yellow;
+    }
+  }
+
+  .contact > p{
+    padding-left: 30px;
+    color: #fff;
+    font-family: Nunito;
+    font-weight: 300;
+    font-size: 1.2em;
+    /* *padding: 8px; */
+  }
+
+  }
+}

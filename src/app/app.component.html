@@ -1,0 +1,76 @@
+<app-nav-bar></app-nav-bar>
+<router-outlet>
+  <section id="img-top">
+    <div class="img-top__description">
+      <h1>BENEFICIOS PARA TI</h1>
+      <p>
+        Conoce y disfruta de los beneficios que tenemos para los empleados de
+        las empresas relacionadas con explotación de recursos mineros de carbón.
+      </p>
+      <button class="button">Empieza aquí</button>
+    </div>
+    <img
+      class="img-top__img"
+      src="../assets/img/grupo-trabajo.png"
+      alt="Grupo de trabajo"
+    />
+  </section>
+  <section id="section-services">
+    <h2 class="section-services__title">Servicios</h2>
+    <p class="section-services__description">
+      Conoce todos los beneficios que ofrecemos
+    </p>
+    <div class="cards">
+      <div class="cards__card">
+        <h2>AHORROS</h2>
+        <img src="../assets/img/ahorro.png" alt="Ahorro" />
+      </div>
+      <div class="cards__card">
+        <h2>CRÉDITOS</h2>
+        <img
+          src="../assets/img/tarjeta-de-credito.png"
+          alt="Tarjetas de crédito"
+        />
+      </div>
+    </div>
+  </section>
+  <section id="afiliacion">
+    <div class="afiliacion__text">
+      <h2>Solicitar afiliación</h2>
+      <p>
+        ¿Que estás esperando para comenzar a invertir en la realización de tus
+        sueños?
+      </p>
+      <button>Solicita aquí</button>
+    </div>
+    <img
+      class="afiliacion__img-hands"
+      src="../assets/img/apreton-de-manos.png"
+      alt="manos"
+    />
+  </section>
+  <section id="slide">
+    <h2>Empresas asociadas</h2>
+    <app-slider></app-slider>
+  </section>
+  <section id="contact">
+    <div class="contact__text">
+      <h2>Contáctanos</h2>
+      <hr />
+      <p>
+        Si deseas realizar una sugerencia, una consulta o dejarnos un
+        comentario, contáctanos.
+      </p>
+    </div>
+    <form class="contact__form" action="">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" />
+      <label for="email">Correo electrónico:</label>
+      <input type="text" id="email" />
+      <label for="messenge">Mensaje:</label>
+      <textarea name="" id="messenge" cols="30" rows="10"></textarea>
+      <button>Enviar</button>
+    </form>
+  </section>
+</router-outlet>
+<app-footer></app-footer>

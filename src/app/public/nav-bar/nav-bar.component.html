@@ -1,0 +1,50 @@
+<app-log-in class="login" (active)="openModal($event)" [ngClass]="{'login--active': open}">
+</app-log-in>
+<div class="container__nav-bar">
+  <header>
+    <span class="bar-acronym">
+      Fondo de Empleados de la Empresa Mecánicos Asociados de la Guajira
+    </span>
+    <nav class="nav-bar">
+      <button class="button-burger" (click)="activateMenu()">
+        <img
+          src="../../../assets/img/icono-burger.svg"
+          alt="Botón hamburguesa"
+        />
+      </button>
+      <a [routerLink]="['/']" ><img class="nav-bar__logo" src="../../../assets/img/logo.png" alt="Logo"></a>
+
+      <ul
+        class="nav-bar__buttons"
+        [ngClass]="{ 'nav-bar__buttons--active': active }"
+      >
+        <li class="button-close">
+          <button (click)="activateMenu()">X</button>
+        </li>
+        <li class="button">
+          <a routerLink="" routerLinkActive="active">Inicio</a>
+        </li>
+        <li class="button">
+          <a routerLink="#" routerLinkActive="active">Ahorros</a>
+        </li>
+        <li class="button">
+          <a routerLink="#" routerLinkActive="active">Créditos</a>
+        </li>
+        <li class="button">
+          <a routerLink="#" routerLinkActive="active">Afiliación</a>
+        </li>
+        <li class="button">
+          <a routerLink="#" routerLinkActive="active">Sobre nosotros</a>
+        </li>
+        <li class="button --login-mobile">
+          <button class="nav-bar__button-login--movil" (click)="openModal(true)">
+            Iniciar sesión
+          </button>
+        </li>
+      </ul>
+       <button class="nav-bar__button-login" (click)="openModal(true)">
+        <img src="../../../assets/img/user.svg" alt="Icono usuario" />
+      </button>
+    </nav>
+  </header>
+</div>
